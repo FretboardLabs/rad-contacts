@@ -10,6 +10,8 @@
 #import "RCContact.h"
 #import <AddressBook/AddressBook.h>
 
+NSString * const kRCContactsModelDidReloadNotification = @"RCContactsModelDidReloadNotification";
+
 @interface RCContactsModel ()
 {
     BOOL isLoading;
@@ -20,6 +22,18 @@
 @end
 
 @implementation RCContactsModel
+
++ (instancetype)sharedModel
+{
+    static RCContactsModel *theModel = nil;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        if (!theModel) {
+            theModel = [[RCContactsModel alloc] init];
+        }
+    });
+    return theModel;
+}
 
 - (id)init
 {
@@ -87,9 +101,7 @@
             self.contacts = newContacts;
             isLoading = false;
             
-            if (_delegate) {
-                [_delegate contactsModelDidReload:self];
-            }
+            [[NSNotificationCenter defaultCenter] postNotificationName:kRCContactsModelDidReloadNotification object:nil];
         });
     }
 }

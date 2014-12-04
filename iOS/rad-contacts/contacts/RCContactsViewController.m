@@ -7,13 +7,16 @@
 //
 
 #import "RCContactsViewController.h"
+#import "RCContactsModel.h"
 #import "RCContact.h"
 
 NSString * const kRCTableViewCellReuseIdentifier = @"RCTableViewCellReuseIdentifier";
 
 @interface RCContactsViewController ()
 
-@property (nonatomic, strong) RCContactsModel *contactsModel;
+@property (nonatomic, assign) RCContactsModel *contactsModel; // just a pointer to the singleton
+
+- (void)onContactsReload;
 
 @end
 
@@ -22,8 +25,8 @@ NSString * const kRCTableViewCellReuseIdentifier = @"RCTableViewCellReuseIdentif
 - (id)init
 {
     if (self = [super init]) {
-        self.contactsModel = [[RCContactsModel alloc] init];
-        _contactsModel.delegate = self;
+        self.contactsModel = [RCContactsModel sharedModel];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onContactsReload) name:kRCContactsModelDidReloadNotification object:nil];
     }
     return self;
 }
@@ -37,6 +40,13 @@ NSString * const kRCTableViewCellReuseIdentifier = @"RCTableViewCellReuseIdentif
     // table view of contacts
     self.tableView.allowsSelection = false;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kRCTableViewCellReuseIdentifier];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    // [super dealloc];
 }
 
 
@@ -74,7 +84,7 @@ NSString * const kRCTableViewCellReuseIdentifier = @"RCTableViewCellReuseIdentif
 
 #pragma mark RCContactsModel
 
-- (void)contactsModelDidReload:(RCContactsModel *)model
+- (void)onContactsReload
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         if (self.isViewLoaded) {

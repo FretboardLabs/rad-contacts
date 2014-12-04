@@ -10,15 +10,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class RCContactsModel;
-
-@protocol RCContactsDelegate <NSObject>
-
-- (void)contactsModelDidReload: (RCContactsModel *)model;
-
-@end
+FOUNDATION_EXPORT NSString * const kRCContactsModelDidReloadNotification;
 
 @interface RCContactsModel : NSObject
+
+/**
+ *  Accesses the singleton contacts model instance.
+ */
++ (instancetype)sharedModel;
 
 /**
  *  Read the device's address book.
@@ -29,7 +28,5 @@
  *  Ordered set of RCContacts representing contacts from the device's address book.
  */
 @property (atomic, strong) NSOrderedSet *contacts;
-
-@property (nonatomic, assign) id<RCContactsDelegate> delegate;
 
 @end

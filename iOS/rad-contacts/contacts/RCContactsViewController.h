@@ -9,9 +9,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RCContactsModel.h"
 
-@interface RCContactsViewController : UITableViewController <RCContactsDelegate>
+@interface RCContactsViewController : UITableViewController
 
 
 @end
