@@ -51,9 +51,6 @@
     // [super dealloc];
 }
 
-
-#pragma mark internal
-
 - (void)reload
 {
     if (!isLoading) {
