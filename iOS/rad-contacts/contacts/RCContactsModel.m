@@ -78,22 +78,9 @@ NSString * const kRCContactsModelDidReloadNotification = @"RCContactsModelDidRel
             
             for (NSUInteger contactIdx = 0; contactIdx < allContacts.count; contactIdx++) {
                 ABRecordRef record = (__bridge ABRecordRef) allContacts[contactIdx];
-                
-                NSString *contactName = (__bridge NSString *)(ABRecordCopyValue(record, kABPersonFirstNameProperty));
-                NSString *contactLastName = (__bridge NSString *)(ABRecordCopyValue(record, kABPersonLastNameProperty));
-                ABRecordID contactId = ABRecordGetRecordID(record);
-                
-                if (contactLastName && contactLastName.length) {
-                    contactName = [NSString stringWithFormat:@"%@ %@", contactName, contactLastName];
-                }
-                
-                // build an RCContact with this name and id.
-                if (contactId != kABRecordInvalidID) {
-                    RCContact *newContact = [[RCContact alloc] init];
-                    newContact.name = contactName;
-                    newContact.contactId = contactId;
+                RCContact *newContact = [[RCContact alloc] initWithAddressBookRecord:record];
+                if (newContact)
                     [newContacts addObject:newContact];
-                }
             }
             
             // don't need to CFRelease allContacts
