@@ -14,7 +14,7 @@
     
 }
 
-@property (nonatomic, strong) RCContactsViewController *vContacts;
+@property (nonatomic, strong) RCContactsViewController *vcContacts;
 
 @end
 
@@ -22,9 +22,9 @@
 
 - (id) init
 {
-    RCContactsViewController *vContacts = [[RCContactsViewController alloc] init];
-    if (self = [super initWithRootViewController:vContacts]) {
-        self.vContacts = vContacts;
+    RCContactsViewController *vcContacts = [[RCContactsViewController alloc] init];
+    if (self = [super initWithRootViewController:vcContacts]) {
+        self.vcContacts = vcContacts;
     }
     return self;
 }
