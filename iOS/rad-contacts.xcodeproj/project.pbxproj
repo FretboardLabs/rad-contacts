@@ -14,6 +14,7 @@
 		B5E4195A1A30C81400E8AFB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E419581A30C81400E8AFB4 /* main.m */; };
 		B5E4195E1A30CB6300E8AFB4 /* RCContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E4195D1A30CB6300E8AFB4 /* RCContactsViewController.m */; };
 		B5E419611A30CBAA00E8AFB4 /* RCNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E419601A30CBAA00E8AFB4 /* RCNavigationViewController.m */; };
+		B5E419641A30CD3700E8AFB4 /* RCContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E419631A30CD3700E8AFB4 /* RCContactsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 		B5E4195D1A30CB6300E8AFB4 /* RCContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCContactsViewController.m; sourceTree = "<group>"; };
 		B5E4195F1A30CBAA00E8AFB4 /* RCNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCNavigationViewController.h; sourceTree = "<group>"; };
 		B5E419601A30CBAA00E8AFB4 /* RCNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCNavigationViewController.m; sourceTree = "<group>"; };
+		B5E419621A30CD3700E8AFB4 /* RCContactsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCContactsModel.h; sourceTree = "<group>"; };
+		B5E419631A30CD3700E8AFB4 /* RCContactsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCContactsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 			children = (
 				B5E4195C1A30CB6300E8AFB4 /* RCContactsViewController.h */,
 				B5E4195D1A30CB6300E8AFB4 /* RCContactsViewController.m */,
+				B5E419621A30CD3700E8AFB4 /* RCContactsModel.h */,
+				B5E419631A30CD3700E8AFB4 /* RCContactsModel.m */,
 			);
 			path = contacts;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5E4195E1A30CB6300E8AFB4 /* RCContactsViewController.m in Sources */,
+				B5E419641A30CD3700E8AFB4 /* RCContactsModel.m in Sources */,
 				B5E4195A1A30C81400E8AFB4 /* main.m in Sources */,
 				B5E419361A30C77A00E8AFB4 /* RCAppDelegate.m in Sources */,
 				B5E419611A30CBAA00E8AFB4 /* RCNavigationViewController.m in Sources */,
