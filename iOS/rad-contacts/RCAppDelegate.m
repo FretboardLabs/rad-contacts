@@ -7,11 +7,11 @@
 //
 
 #import "RCAppDelegate.h"
-#import "RCViewController.h"
+#import "RCNavigationViewController.h"
 
 @interface RCAppDelegate ()
 
-@property (nonatomic, strong) RCViewController *vcContacts;
+@property (nonatomic, strong) RCNavigationViewController *vcRoot;
 
 @end
 
@@ -22,8 +22,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.vcContacts = [[RCViewController alloc] init];
-    self.window.rootViewController = _vcContacts;
+    self.vcRoot = [[RCNavigationViewController alloc] init];
+    self.window.rootViewController = _vcRoot;
     [self.window makeKeyAndVisible];
     
     return YES;

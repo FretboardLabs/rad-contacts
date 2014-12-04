@@ -1,5 +1,5 @@
 //
-//  RCViewController.h
+//  RCNavigationViewController.h
 //  rad-contacts
 //
 //  Created by Ben Roth on 12/4/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RCViewController : UITableViewController
-
+@interface RCNavigationViewController : UINavigationController
 
 @end
-

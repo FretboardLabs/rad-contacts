@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B5E419361A30C77A00E8AFB4 /* RCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E419351A30C77A00E8AFB4 /* RCAppDelegate.m */; };
-		B5E419391A30C77A00E8AFB4 /* RCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E419381A30C77A00E8AFB4 /* RCViewController.m */; };
 		B5E4193E1A30C77A00E8AFB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E4193D1A30C77A00E8AFB4 /* Images.xcassets */; };
 		B5E419411A30C77A00E8AFB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E4193F1A30C77A00E8AFB4 /* LaunchScreen.xib */; };
 		B5E4194D1A30C77A00E8AFB4 /* rad_contactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E4194C1A30C77A00E8AFB4 /* rad_contactsTests.m */; };
 		B5E4195A1A30C81400E8AFB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E419581A30C81400E8AFB4 /* main.m */; };
+		B5E4195E1A30CB6300E8AFB4 /* RCContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E4195D1A30CB6300E8AFB4 /* RCContactsViewController.m */; };
+		B5E419611A30CBAA00E8AFB4 /* RCNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E419601A30CBAA00E8AFB4 /* RCNavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +30,6 @@
 		B5E4192D1A30C77A00E8AFB4 /* rad-contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rad-contacts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E419341A30C77A00E8AFB4 /* RCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCAppDelegate.h; sourceTree = "<group>"; };
 		B5E419351A30C77A00E8AFB4 /* RCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCAppDelegate.m; sourceTree = "<group>"; };
-		B5E419371A30C77A00E8AFB4 /* RCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCViewController.h; sourceTree = "<group>"; };
-		B5E419381A30C77A00E8AFB4 /* RCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCViewController.m; sourceTree = "<group>"; };
 		B5E4193D1A30C77A00E8AFB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B5E419401A30C77A00E8AFB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B5E419461A30C77A00E8AFB4 /* rad-contactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rad-contactsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +37,10 @@
 		B5E4194C1A30C77A00E8AFB4 /* rad_contactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rad_contactsTests.m; sourceTree = "<group>"; };
 		B5E419571A30C81400E8AFB4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E419581A30C81400E8AFB4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5E4195C1A30CB6300E8AFB4 /* RCContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCContactsViewController.h; sourceTree = "<group>"; };
+		B5E4195D1A30CB6300E8AFB4 /* RCContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCContactsViewController.m; sourceTree = "<group>"; };
+		B5E4195F1A30CBAA00E8AFB4 /* RCNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCNavigationViewController.h; sourceTree = "<group>"; };
+		B5E419601A30CBAA00E8AFB4 /* RCNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCNavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +84,11 @@
 			children = (
 				B5E419341A30C77A00E8AFB4 /* RCAppDelegate.h */,
 				B5E419351A30C77A00E8AFB4 /* RCAppDelegate.m */,
-				B5E419371A30C77A00E8AFB4 /* RCViewController.h */,
-				B5E419381A30C77A00E8AFB4 /* RCViewController.m */,
+				B5E4195F1A30CBAA00E8AFB4 /* RCNavigationViewController.h */,
+				B5E419601A30CBAA00E8AFB4 /* RCNavigationViewController.m */,
 				B5E4193D1A30C77A00E8AFB4 /* Images.xcassets */,
 				B5E4193F1A30C77A00E8AFB4 /* LaunchScreen.xib */,
+				B5E4195B1A30CB0E00E8AFB4 /* contacts */,
 				B5E419561A30C81400E8AFB4 /* supporting */,
 			);
 			path = "rad-contacts";
@@ -114,6 +118,15 @@
 				B5E419581A30C81400E8AFB4 /* main.m */,
 			);
 			path = supporting;
+			sourceTree = "<group>";
+		};
+		B5E4195B1A30CB0E00E8AFB4 /* contacts */ = {
+			isa = PBXGroup;
+			children = (
+				B5E4195C1A30CB6300E8AFB4 /* RCContactsViewController.h */,
+				B5E4195D1A30CB6300E8AFB4 /* RCContactsViewController.m */,
+			);
+			path = contacts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,9 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5E419391A30C77A00E8AFB4 /* RCViewController.m in Sources */,
+				B5E4195E1A30CB6300E8AFB4 /* RCContactsViewController.m in Sources */,
 				B5E4195A1A30C81400E8AFB4 /* main.m in Sources */,
 				B5E419361A30C77A00E8AFB4 /* RCAppDelegate.m in Sources */,
+				B5E419611A30CBAA00E8AFB4 /* RCNavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,23 +1,26 @@
 //
-//  RCViewController.m
+//  RCContactsViewController.m
 //  rad-contacts
 //
 //  Created by Ben Roth on 12/4/14.
 //  Copyright (c) 2014 Fretboard Labs. All rights reserved.
 //
 
-#import "RCViewController.h"
+#import "RCContactsViewController.h"
 
 NSString * const kRCTableViewCellReuseIdentifier = @"RCTableViewCellReuseIdentifier";
 
-@interface RCViewController ()
+@interface RCContactsViewController ()
 
 @end
 
-@implementation RCViewController
+@implementation RCContactsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"Rad Contacts";
+    self.edgesForExtendedLayout = [super edgesForExtendedLayout] ^ UIRectEdgeTop;
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kRCTableViewCellReuseIdentifier];
 }
