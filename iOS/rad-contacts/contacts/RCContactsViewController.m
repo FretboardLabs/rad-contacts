@@ -7,6 +7,7 @@
 //
 
 #import "RCContactsViewController.h"
+#import "RCContact.h"
 
 NSString * const kRCTableViewCellReuseIdentifier = @"RCTableViewCellReuseIdentifier";
 
@@ -63,7 +64,8 @@ NSString * const kRCTableViewCellReuseIdentifier = @"RCTableViewCellReuseIdentif
     
     if (_contactsModel && indexPath.row < _contactsModel.contacts.count) {
         // cell displays the name of the corresponding contact
-        cell.textLabel.text = [_contactsModel.contacts objectAtIndex:indexPath.row];
+        RCContact *contact = [_contactsModel.contacts objectAtIndex:indexPath.row];
+        cell.textLabel.text = contact.name;
     }
     
     return cell;

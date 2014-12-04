@@ -7,6 +7,7 @@
 //
 
 #import "RCContactsModel.h"
+#import "RCContact.h"
 #import <AddressBook/AddressBook.h>
 
 @interface RCContactsModel ()
@@ -58,7 +59,7 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSMutableOrderedSet *newContacts = [NSMutableOrderedSet orderedSet];
             
-            // enumerate contacts from the address book and add them to our set by full name.
+            // enumerate contacts from the address book and add them to our set.
             NSArray *allContacts = (__bridge_transfer NSArray *) ABAddressBookCopyArrayOfAllPeople(_addressBookRef);
             
             for (NSUInteger contactIdx = 0; contactIdx < allContacts.count; contactIdx++) {
@@ -66,12 +67,19 @@
                 
                 NSString *contactName = (__bridge NSString *)(ABRecordCopyValue(record, kABPersonFirstNameProperty));
                 NSString *contactLastName = (__bridge NSString *)(ABRecordCopyValue(record, kABPersonLastNameProperty));
+                ABRecordID contactId = ABRecordGetRecordID(record);
                 
                 if (contactLastName && contactLastName.length) {
                     contactName = [NSString stringWithFormat:@"%@ %@", contactName, contactLastName];
                 }
                 
-                [newContacts addObject:contactName];
+                // build an RCContact with this name and id.
+                if (contactId != kABRecordInvalidID) {
+                    RCContact *newContact = [[RCContact alloc] init];
+                    newContact.name = contactName;
+                    newContact.contactId = contactId;
+                    [newContacts addObject:newContact];
+                }
             }
             
             // don't need to CFRelease allContacts
