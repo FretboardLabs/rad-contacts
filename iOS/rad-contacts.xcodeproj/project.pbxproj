@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD056E4B1A353B6200C8CF30 /* RCImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD056E4A1A353B6200C8CF30 /* RCImagePickerViewController.m */; };
+		AD056E4E1A353C0D00C8CF30 /* RCCropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD056E4D1A353C0D00C8CF30 /* RCCropImageViewController.m */; };
+		AD056E511A356F3300C8CF30 /* UIImage+RCImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD056E501A356F3300C8CF30 /* UIImage+RCImage.m */; };
 		B5E419361A30C77A00E8AFB4 /* RCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E419351A30C77A00E8AFB4 /* RCAppDelegate.m */; };
 		B5E4193E1A30C77A00E8AFB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E4193D1A30C77A00E8AFB4 /* Images.xcassets */; };
 		B5E419411A30C77A00E8AFB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E4193F1A30C77A00E8AFB4 /* LaunchScreen.xib */; };
@@ -29,6 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD056E491A353B6200C8CF30 /* RCImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCImagePickerViewController.h; sourceTree = "<group>"; };
+		AD056E4A1A353B6200C8CF30 /* RCImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCImagePickerViewController.m; sourceTree = "<group>"; };
+		AD056E4C1A353C0D00C8CF30 /* RCCropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCropImageViewController.h; sourceTree = "<group>"; };
+		AD056E4D1A353C0D00C8CF30 /* RCCropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCropImageViewController.m; sourceTree = "<group>"; };
+		AD056E4F1A356F3300C8CF30 /* UIImage+RCImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RCImage.h"; sourceTree = "<group>"; };
+		AD056E501A356F3300C8CF30 /* UIImage+RCImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RCImage.m"; sourceTree = "<group>"; };
 		B5E4192D1A30C77A00E8AFB4 /* rad-contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rad-contacts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E419341A30C77A00E8AFB4 /* RCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCAppDelegate.h; sourceTree = "<group>"; };
 		B5E419351A30C77A00E8AFB4 /* RCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCAppDelegate.m; sourceTree = "<group>"; };
@@ -131,10 +140,16 @@
 			children = (
 				B5E4195C1A30CB6300E8AFB4 /* RCContactsViewController.h */,
 				B5E4195D1A30CB6300E8AFB4 /* RCContactsViewController.m */,
+				AD056E491A353B6200C8CF30 /* RCImagePickerViewController.h */,
+				AD056E4A1A353B6200C8CF30 /* RCImagePickerViewController.m */,
+				AD056E4C1A353C0D00C8CF30 /* RCCropImageViewController.h */,
+				AD056E4D1A353C0D00C8CF30 /* RCCropImageViewController.m */,
 				B5E419621A30CD3700E8AFB4 /* RCContactsModel.h */,
 				B5E419631A30CD3700E8AFB4 /* RCContactsModel.m */,
 				B5E4196C1A30DBE300E8AFB4 /* RCContact.h */,
 				B5E4196D1A30DBE300E8AFB4 /* RCContact.m */,
+				AD056E4F1A356F3300C8CF30 /* UIImage+RCImage.h */,
+				AD056E501A356F3300C8CF30 /* UIImage+RCImage.m */,
 			);
 			path = contacts;
 			sourceTree = "<group>";
@@ -240,10 +255,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5E4195E1A30CB6300E8AFB4 /* RCContactsViewController.m in Sources */,
+				AD056E4E1A353C0D00C8CF30 /* RCCropImageViewController.m in Sources */,
+				AD056E4B1A353B6200C8CF30 /* RCImagePickerViewController.m in Sources */,
 				B5E419641A30CD3700E8AFB4 /* RCContactsModel.m in Sources */,
 				B5E4195A1A30C81400E8AFB4 /* main.m in Sources */,
 				B5E419361A30C77A00E8AFB4 /* RCAppDelegate.m in Sources */,
 				B5E419611A30CBAA00E8AFB4 /* RCNavigationViewController.m in Sources */,
+				AD056E511A356F3300C8CF30 /* UIImage+RCImage.m in Sources */,
 				B5E4196E1A30DBE300E8AFB4 /* RCContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

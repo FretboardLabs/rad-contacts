@@ -9,6 +9,7 @@
 #import "RCContactsModel.h"
 #import "RCContact.h"
 #import <AddressBook/AddressBook.h>
+#import <UIKit/UIKit.h>
 
 NSString * const kRCContactsModelDidReloadNotification = @"RCContactsModelDidReloadNotification";
 
@@ -86,6 +87,20 @@ NSString * const kRCContactsModelDidReloadNotification = @"RCContactsModelDidRel
             // don't need to CFRelease allContacts
             
             self.contacts = newContacts;
+			
+			// sort an array of contacts
+			NSArray *sortedContactsArray;
+			sortedContactsArray = [self.contacts.array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+				if ([obj1 isKindOfClass:[RCContact class]] && [obj2 isKindOfClass:[RCContact class]]) {
+					RCContact *contact1 = (RCContact *)obj1;
+					RCContact *contact2 = (RCContact *)obj2;
+					return [contact1.name caseInsensitiveCompare:contact2.name];
+				} else {
+					return NSOrderedSame;
+				}
+			}];
+			self.contacts = [[NSOrderedSet alloc] initWithArray:sortedContactsArray];
+			
             isLoading = false;
             
             [[NSNotificationCenter defaultCenter] postNotificationName:kRCContactsModelDidReloadNotification object:nil];

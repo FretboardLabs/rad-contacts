@@ -11,11 +11,14 @@
 #import <Foundation/Foundation.h>
 #import <AddressBook/AddressBook.h>
 
+@class UIImage;
+
 @interface RCContact : NSObject
 
-- (id)initWithAddressBookRecord: (ABRecordRef)record;
+- (id)initWithAddressBookRecord:(ABRecordRef)record;
 
 @property (nonatomic, assign) ABRecordID contactId;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) UIImage *contactImage;
 
 @end

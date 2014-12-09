@@ -19,12 +19,15 @@
         
         if (contactLastName && contactLastName.length) {
             contactName = [NSString stringWithFormat:@"%@ %@", contactName, contactLastName];
-        }
-        
+		} else if (contactName.length == 0) {
+			return nil;
+		}
+		
         // build an RCContact with this name and id.
         if (contactId != kABRecordInvalidID) {
             self.name = contactName;
             self.contactId = contactId;
+			self.contactImage = nil;
         } else {
             return nil;
         }
